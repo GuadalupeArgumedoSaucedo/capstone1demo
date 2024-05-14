@@ -1,0 +1,108 @@
+/* ==============================
+   Global Styles 
+   Sets up some defaults for the entire webpage, like font family and base margins.
+   ============================== */
+   body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Default font for the whole page */
+}
+
+/* Clearfix hack for floating elements */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ==============================
+   Layout Styles
+   Covers the structural elements of the page, such as the header, footer, and navigation.
+   ============================== */
+header, footer, nav, main, section, article, aside {
+    display: block; /* Ensures these elements are treated as block-level */
+}
+
+header {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 10px 20px; /* Padding around the content */
+}
+
+footer {
+    background-color: #343a40; /* Dark background for the footer */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    float: right; /* Positions the navigation to the right */
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points from list */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Displays list items inline */
+    margin-left: 20px;
+}
+
+/* ==============================
+   Typography
+   Specifies styles for text elements like headings and paragraphs, including font sizes and colors.
+   ============================== */
+h1, h2, h3 {
+    color: #333; /* Dark grey color for headings */
+}
+
+h1 {
+    font-size: 24px; /* Larger font size for main title */
+}
+
+h2 {
+    font-size: 20px; /* Medium font size for section titles */
+}
+
+p {
+    color: #666; /* Medium grey color for paragraph text */
+    line-height: 1.6; /* Spacing between lines */
+}
+
+/* ==============================
+   Colors and Backgrounds
+   Sets background colors and padding for different sections like aside and article to visually separate them.
+   ============================== */
+aside {
+    background-color: #f0f0f0; /* Light background for aside */
+    padding: 10px;
+    margin-top: 20px; /* Adds spacing above the aside */
+}
+
+article {
+    background-color: #ffffff; /* White background for articles */
+    border: 1px solid #ddd; /* Adds a subtle border */
+    padding: 20px;
+    margin-bottom: 20px; /* Adds spacing below the article */
+}
+
+/* ==============================
+   Responsive Design
+   Adjusts layout and typography for different screen sizes using media queries, which is crucial for mobile-friendly desig
+   ============================== */
+@media (max-width: 768px) {
+    nav ul {
+        float: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block; /* Stack the links vertically on small screens */
+        margin: 10px 0;
+    }
+
+    header {
+        text-align: center; /* Center content in the header on small screens */
+    }
+}
